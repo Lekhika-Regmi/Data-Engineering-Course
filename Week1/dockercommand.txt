@@ -1,0 +1,12 @@
+# Start the PostgreSQL container
+docker compose up -d
+
+# connect to the db
+docker exec -it course_postgres psql -U postgres -d ridedb
+
+#Stops the container cleanly
+docker compose down
+
+#check if container is running
+docker ps
+

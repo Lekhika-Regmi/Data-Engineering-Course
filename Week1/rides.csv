@@ -1,4 +1,4 @@
-ride_id,driver_name,rider_name,pickup_city,dropoff_city,fare_amount,ride_distance_km,ride_status,requested_at,completed_at,rating,payment_method
+ride_id,driver_name,passenger_name,pickup_city,dropoff_city,fare_amount,ride_distance_km,ride_status,requested_at,completed_at,rating,payment_method
 1,Anita Rai,Dipesh Oli,Chitwan,Bhaktapur,462.04,6.95,no_show,2024-01-04 01:03:53,,,card
 2,Sita Tamang,Bina Ghimire,Pokhara,Kathmandu,300.0,35.15,cancelled,2024-12-23 08:44:17,,,
 3,Suresh Magar,Sanjay Maharjan,Hetauda,Kathmandu,493.19,35.77,completed,2024-04-07 07:26:37,2024-04-07 08:05:37.701605,3.1,cash
