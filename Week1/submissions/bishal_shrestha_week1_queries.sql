@@ -50,7 +50,7 @@ WHERE rating IS NULL
 SELECT 
 ride_id, driver_name, rider_name AS passenger_name, requested_at, completed_at
 FROM rides 
-WHERE requested_at IS NOT NULL AND ride_status = 'completed'
+WHERE ride_status = 'completed'
 ORDER BY completed_at DESC
 LIMIT 10
 
@@ -78,8 +78,15 @@ WHERE pickup_city = dropoff_city
 
 -- How many are there? Add a comment: are these valid records?
 --count: 192
---Yes, it is valid. Note that rows with NULL values in either column won't match, since NULL = NULL is not considered true in SQL.
-SELECT 
-count(*) 
-FROM rides 
-WHERE pickup_city = dropoff_city 
+
+-- Overall dataset
+SELECT
+    AVG(fare_amount / ride_distance_km) AS Fare_Price_Per_KM_Overall
+FROM rides;
+
+-- Within-city rides only
+SELECT
+    AVG(fare_amount / ride_distance_km) AS Fare_Price_Per_KM_Same_City
+FROM rides
+WHERE pickup_city = dropoff_city;
+
